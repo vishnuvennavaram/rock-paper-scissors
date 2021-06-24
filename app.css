@@ -39,12 +39,23 @@ button {
 
   .highlight {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 100;
     font-family: 'Times New Roman', Times, serif;
-    text-decoration:solid;
+    font-style: oblique;
+    font-feature-settings: "aalt";
+    text-decoration-color: darkcyan;
   }
 
   #game {
     display: none;
+  }
+
+  .color-highlight {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-feature-settings: "aalt";
+    text-decoration-color: darkcyan;
   }
