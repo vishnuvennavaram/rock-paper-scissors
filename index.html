@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="app.css" />
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <div id="title">Rock Paper Scissors</div>
+  <div id="startGame" style="width: 100%" ,>
+    <p>
+      <span class="highlight"
+        >Ready for a 5 round game challenge with Computer</span
+      >
+    </p>
+    <button class="center" onclick="startGame()" style="display: block">
+      LET'S PLAY
+    </button>
+  </div>
+
+  <div id="game">
+    <div id="images">
+      <div class="image-column">
+        <img
+          src="assets/rock.jpeg"
+          alt="rock"
+          name="rock"
+          style="width: 100%"
+          class="image"
+          id="rock"
+          onclick="game('ROCK')"
+        />
+      </div>
+      <div class="image-column">
+        <img
+          src="assets/paper.jpeg"
+          alt="paper"
+          name="paper"
+          style="width: 100%"
+          class="image"
+          id="paper"
+          onclick="game('PAPER')"
+        />
+      </div>
+      <div class="image-column">
+        <img
+          src="assets/scissors.jpeg"
+          alt="scissors"
+          name="scissors"
+          style="width: 100%"
+          class="image"
+          id="scissors"
+          onclick="game('SCISSORS')"
+        />
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="bottom-section">
+      <div style="width: 100%; float: left">
+        <button
+          id="reset"
+          class="center"
+          onclick="resetGame()"
+          style="display: none"
+        >
+          RESET
+        </button>
+        <p class="winner"></p>
+        <p><span id="finalText" class="highlight"></span></p>
+        <p><span id="scoreDisplay"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
