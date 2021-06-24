@@ -47,6 +47,9 @@ button {
     text-decoration-color: darkcyan;
   }
 
+  .bigfont {
+    font-size: 30px;
+  }
   #game {
     display: none;
   }
@@ -57,5 +60,11 @@ button {
     font-family: 'Times New Roman', Times, serif;
     font-style: oblique;
     font-feature-settings: "aalt";
-    text-decoration-color: darkcyan;
+    text-decoration-color: cyan;
+    animation: blinker 1s step-start 10;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
   }

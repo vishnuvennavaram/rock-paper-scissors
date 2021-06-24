@@ -2,6 +2,11 @@
 let humanScore = 0;
 let computerScore = 0;
 let roundsCounter = 0;
+let winnerText;
+let displayScoreText;
+let finalWinner;
+const gameTied = "Final Scores tied, play an extra round to find out winner";
+const resetText = "Reset to challenge computer again";
 
 function game(selection) {
   gameResult(selection);
@@ -61,38 +66,36 @@ function gameResult(human) {
       }
   }
   console.log("RESULT " + result);
+  
   if (result == "HUMAN") {
-    document.querySelector(".winner").innerHTML = "You win against computer";
-    console.log(human + " beats " + computer);
+    winnerText = "You win against computer";
     humanScore++;
   } else if (result == "COMPUTER") {
-    document.querySelector(".winner").innerHTML = "You lose against computer";
-    console.log(human + " loses " + computer);
+    winnerText = "You lose against computer";
     computerScore++;
   } else {
-    document.querySelector(".winner").innerHTML = "This round is a draw";
+    winnerText = "This round is a draw";
   }
+  document.querySelector("#winner").innerHTML = winnerText;
 
   roundsCounter++;
   updateScores();
   if (roundsCounter >= 5) {
     if (humanScore === computerScore) {
-      document.querySelector("#scoreDisplay").innerHTML =
-        "Final Scores tied, play an extra round to find out winner";
+      document.querySelector("#scoreDisplay").innerHTML = tiedScoreText;
     } else {
       document.querySelector("#scoreDisplay").style.display = "none";
       document.querySelector("#images").style.display = "none";
+      document.querySelector("#winner").style.display = "none";
       document.querySelector("#reset").style.display = "block";
-      document.querySelector("#finalText").innerHTML =
-        "Reset to challenge computer again";
+      document.querySelector("#resetText").innerHTML = resetText;
 
       if (humanScore > computerScore) {
-        document.querySelector(".winner").innerHTML =
-          "You won";
+          finalWinner = "Final result: You won";
       } else {
-        document.querySelector(".winner").innerHTML =
-          "You Lose";
+          finalWinner = "Final result: You Lose";
       }
+      document.querySelector("#finalwinner").innerHTML = finalWinner;
     }
   }
 }
