@@ -92,6 +92,7 @@ function updateScores() {
 
 // Reset game scores back to 0
 function resetGame() {
+  document.location.reload();
   humanScore = 0;
   computerScore = 0;
   roundsCounter = 0;
