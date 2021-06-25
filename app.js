@@ -5,7 +5,7 @@ let roundsCounter = 0;
 let winnerText;
 let displayScoreText;
 let finalWinner;
-const gameTied = "Final Scores tied, play an extra round to find out winner";
+const tiedScoreText = "Final Scores tied, play an extra round to find out winner";
 const resetText = "Reset to challenge computer again";
 
 function game(selection) {
@@ -84,7 +84,6 @@ function gameResult(human) {
     if (humanScore === computerScore) {
       document.querySelector("#scoreDisplay").innerHTML = tiedScoreText;
     } else {
-      document.querySelector("#scoreDisplay").style.display = "none";
       document.querySelector("#images").style.display = "none";
       document.querySelector("#winner").style.display = "none";
       document.querySelector("#reset").style.display = "block";
